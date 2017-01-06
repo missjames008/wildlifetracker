@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sightings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Animal</th>
+      <th>Date time</th>
+      <th>latitude</th>
+      <th>longitude</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sightings.each do |sighting| %>
+      <tr>
+        <td><%= sighting.animal %></td>
+        <td><%= sighting.date_time %></td>
+        <td><%= sighting.latitude %></td>
+        <td><%= sighting.longitude %></td>
+        <td><%= link_to 'Show', sighting %></td>
+        <td><%= link_to 'Edit', edit_sighting_path(sighting) %></td>
+        <td><%= link_to 'Destroy', sighting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sighting', new_sighting_path %>
