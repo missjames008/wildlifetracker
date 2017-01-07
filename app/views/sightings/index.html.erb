@@ -16,7 +16,7 @@
   <tbody>
     <% @sightings.each do |sighting| %>
       <tr>
-        <td><%= sighting.animal %></td>
+        <td><%= sighting.animal.common_name %></td>
         <td><%= sighting.date_time %></td>
         <td><%= sighting.latitude %></td>
         <td><%= sighting.longitude %></td>
