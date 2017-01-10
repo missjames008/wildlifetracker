@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+
+  get '/animals/get_sightings' => 'sightings#get_sightings'
+
   resources :sightings
+
   resources :animals
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

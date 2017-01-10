@@ -1,4 +1,5 @@
 $("document").ready(function() {
+  
 
   $("#add_animal").on("click", function() {
       // Data to be submitted

@@ -15,6 +15,16 @@
   <%= @animal.kingdom %>
 </p>
 
+<p>
+  <strong>Color Designation:</strong>
+  <%= @animal.color %>
+</p>
+
+<p>
+  <strong>Image:</strong><br><br>
+  <%= link_to image_tag(@animal.image.url(:large)), @animal.image.url %>
+</p>
+
 <hr>
   <p>
     <strong>Sightings</strong>
